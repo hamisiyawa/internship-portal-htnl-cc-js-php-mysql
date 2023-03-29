@@ -1,0 +1,585 @@
+*{
+    box-sizing: border-box;
+}
+html,body{
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    background: #f6f6f6;
+    font-family: 'lora' , serif;
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-family: 'candal' ,serif;
+    color: #444;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.clearfix::after{
+    content: "";
+    display: block;
+    clear: both;
+ }
+
+.btn{
+    padding: .5rem 1rem;
+    background: #00695C;
+    color: white;
+    border: 1px solid transparent;
+    border-radius: .25rem; 
+    font-size: 1.08em; 
+    font-family: 'lora' , serif;
+}
+
+.btn:hover{
+    color: white !important;
+    background: #014b42;
+}
+
+.text-input{
+    padding: .7rem 1rem;
+    display: block;
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid lightgrey;
+    outline: none;
+    color: #444;
+    line-height: 1.5rem;
+    font-size: 1.2em;
+    font-family: 'Lora', serif;
+}
+.msg{
+    width: 100%;
+    margin: 5px auto;
+    padding: 8px;
+    border-radius: 5px;
+    list-style: none;
+}
+.success{
+    color: #368342;
+    border: 1px solid #306e3a;
+    background: #66eb66;
+}
+.error{
+    color: #884b4b;
+    border: 1px solid #884b4b;
+    background: #e47b7b; 
+}
+
+/*NAVBAR*/
+header{
+    background: #00695C;
+    height: 66px;
+}
+
+header *{
+    color: white;
+}
+header .logo{
+    float: left;
+    height: inherit;
+    margin-left: 2em;
+}
+
+header .logo-text{
+    margin: 9px;
+    font-family: 'candal', serif;
+}
+header .logo-text span{
+    color: #80cbc4;
+}
+
+header ul{
+    float: right;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+header ul li{
+    float: left;
+    position: relative;
+}
+
+header ul li ul{
+    position: absolute;
+    top: 66px;
+    right: 0px;
+    width: 180px;
+    display: none;
+    z-index: 88888;
+}
+
+header ul li:hover ul{
+    display: block;
+}
+
+header ul li ul li{
+    width: 100%;
+}
+
+header ul li ul li a{
+    padding: 10px;
+    background: white;
+    color: #444;
+}
+
+header ul li ul li a.logout{
+    color: red;
+}
+
+header ul li ul li a:hover{
+    background: #cbcfcf;
+}
+header ul li a{
+    display: block;
+    padding: 21px;
+    font-size: 1.1em;
+    text-decoration: none;
+}
+header ul li a:hover{
+    background: #003d36;
+    transition: 0.5s;
+}
+
+header .menu-toggle{
+    display: none;
+}
+.page-wrapper{
+    min-height: 100%;
+}
+.page-wrapper a:hover{
+    color: #014b42;
+}
+/*POST SLIDER*/
+.post-slider{
+    position: relative;
+}
+
+.post-slider .slider-title{
+    text-align: center;
+    margin: 30px auto;
+}
+
+.post-slider .next{
+   position: absolute;
+   top: 50%;
+   right: 30px;
+   font-size: 2em;
+   color: #00695C;
+   cursor: pointer;
+}
+
+.post-slider .prev{
+    position: absolute;
+    top: 50%;
+    left: 30px;
+    font-size: 2em;
+    color: #00695C;
+    cursor: pointer;
+ }
+
+.post-slider .post-wrapper{
+    width: 84%;
+    height: 350px;
+    margin: 0px auto;
+    overflow: hidden;
+}
+
+.post-slider .post-wrapper .post{
+    width: 300px;
+    height: 330px;
+    margin: 0px 10px;
+    background: white;
+    border-radius: 5px;
+    display: inline-block;
+   /* padding: 10px 0px 10px 0px; */
+    box-shadow: 1rem 1rem 1rem -1rem rgb(105, 104, 104);
+}
+.post-slider .post-wrapper .post .slider-image{
+    width: 100%;
+    height: 330px;
+    border-radius: 5px;
+}
+
+/*CONTENT*/
+.content{
+    width: 90%;
+    margin: 30px auto 30px;
+}
+
+.content .main-content{
+    width: 70%;
+    margin: 0 auto;
+}
+
+.content .main-content .recent-internships{
+    margin: 20px;
+    text-align: center;
+    padding: 10px;
+    color: white;
+    background:  #00695C;
+}
+.content .main-content .search{
+    width: 95%;
+    background: #00695C;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    padding: 10px;
+    margin: 20px auto;
+}
+.content .main-content .post{
+    width: 95%;
+    margin: 20px auto;
+    padding-left: 10px;
+    border-color: #00695C;
+    border-radius: 5px;
+    border-style: inset;
+    background: white;
+    position: relative;
+}
+
+.content .main-content .post .apply{
+    position: absolute;
+    bottom: 15px;
+    right: 10px;
+    width: 100px;
+    text-align: center;
+}
+
+.auth-content{
+    width: 30%;
+    margin: 30px auto;
+    margin-bottom: 20px;
+    padding: 15px;
+    background: white;
+    border-color: #00695C;
+    border-style: inset;
+    border-radius: 5px;
+}
+.auth-content.login{
+    margin: 40px auto;
+    padding: 20px;
+}
+.auth-content.login.lg{
+    width: 50%;
+}
+.auth-content .form-title{
+    text-align: center;
+}
+.auth-content form div{
+    margin-bottom: 8px;
+}
+
+.auth-content form p{
+    text-align: center;
+}
+
+.auth-content form p a{
+    text-decoration: underline;
+}
+.radio{
+    position: relative;
+    display: flex;
+}
+.radio.right{
+    position: absolute;
+    right: 10px;
+}
+
+/*APPLICATION*/
+.application-content{
+    width: 50%;
+    margin: 20px auto;
+    padding: 15px;
+    background: white;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+.application-content .form-title{
+    text-align: center;
+}
+
+.application-content form .user-details{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 20px 0 12px 0;
+}
+
+form .user-details .input-box{
+    margin-bottom: 15px;
+    width: calc(100% / 2 - 20px);
+}
+
+.user-details .input-box .details{
+    font-weight: 500;
+    margin-bottom: 5px;
+    display: block;
+    font-family: 'candal' ,serif;
+}
+
+.user-details .input-box .input{
+    outline: none;
+    border-radius: 5px;
+    height: 50px;
+    width: 100%;
+    border: 1px solid #ccc;
+    padding-left: 15px;
+    font-size: 16px;
+    font-family: 'lora' , serif;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+}
+
+.user-details .input-box .input:focus,
+.user-details .input-box .input:valid::after{
+    border-color: #00695C;
+}
+
+form .button{
+    height: 45px;
+    margin: 45px 0;
+}
+
+form .button .input{
+    height: 100%;
+    width: 100%;
+    outline: none;
+    color: #fff;
+    border: none;
+    font-size: 20px;
+    font-weight: 500;
+    border-radius: 5px;
+    line-height: 15px;
+    letter-spacing: 1px;
+    background: #00695C;
+}
+form .button .input:hover{
+    background: #003d36;
+}
+/* ABOUT */
+.about-content{
+    width: 80%;
+    margin: 30px auto;
+    text-align: center;
+}
+
+.about-item{
+    display: inline-block;
+    width: 80%;
+    background: white;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    margin: 0px auto;
+    margin-top: 15px;
+   
+}
+
+.contact{
+    width: 80%;
+    display: inline-block;
+    border-radius: 5px;
+    margin: 0px auto;
+    margin-top: 10px;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    background: white;
+}
+
+.contact-form{
+    width: 60%;
+    background: gray;
+    padding: 10px;
+    margin: 30px auto;
+    border-radius: 5px;
+}
+
+input[type=text], select, textarea {
+    width: 100%; 
+    padding: 12px; 
+    border: 1px solid #ccc; 
+    border-radius: 4px; 
+    box-sizing: border-box; 
+    margin-top: 6px; 
+    margin-bottom: 16px; 
+    resize: vertical 
+}
+
+input[type=submit] {
+    background-color: #04AA6D;
+    color: white;
+    padding: 18px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+/*FOOTER*/
+.footer{
+    position: relative;
+    height: 50px;
+}
+.footer .footer-bottom{
+    background:  #80cbc4;
+    color: #3a3434;
+    height: 50px;
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    padding-top: 20px;
+}
+/* MEDIA QUERY*/
+@media only screen and (max-width: 934px){
+    .auth-content{
+        width: 50%;
+    }
+    .application-content{
+        width: 60%;
+    }
+}
+@media only screen and (max-width: 770px){
+    header{
+        position: relative;
+    }
+    .auth-content{
+        width: 60%;
+    }
+    header ul{
+        width: 100%;
+        background: #41c995;
+        height: 0px;
+        overflow: hidden;
+    }
+    header ul li{
+        width: 100%;
+    } 
+    .showing {
+       min-height: 20em;
+    }
+    header ul li ul{
+        position: static;
+        display: block;
+        width: 100%;
+        
+    }
+    header ul li ul li a{
+        padding: 10px;
+        background: #41c995;
+        color: white;
+        padding-left: 50px;
+    }
+    header ul li ul li a.logout{
+        color: red;
+    }
+    header ul li ul li a:hover{
+        background: #003d36;
+    }
+    header .menu-toggle{
+        display: block;
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        font-size: 1.9em;
+    }
+    header .logo{
+        margin-left: .5em;
+    }
+    .content .main-content{
+        width: 100%;
+        
+    }
+    .application-content{
+        width: 70%;
+    }
+
+    
+.about-content{
+    width: 100%;
+}
+
+.about-item{
+    width: 100%;
+}
+
+.contact{
+    width: 100%;
+}
+
+
+.contact-form{
+    width: 80%;
+}
+    
+}
+@media only screen and (max-width: 600px){
+
+    .content .main-content{
+        width: 100%;
+        
+    }
+    .application-content{
+        width: 90%;
+    }
+    form .user-details .input-box{
+        width: 100%;
+    }
+    form .gender-details .category{
+        width: 100%;
+        justify-content: space-between;
+    }
+    .application-content form .user-details{
+        max-height: 200px;
+        overflow-y: scroll;
+    }
+    .user-details::-webkit-scrollbar{
+        width: 0;
+    }
+    .auth-content{
+        width: 90%;
+    }
+    .content .main-content .recent-internships{
+        font-size: 22px;
+    }
+    .content .main-content .post{
+     padding: 10px;
+    }
+    
+   .content .main-content .post .apply{
+   position: static;
+   display: block;
+   width: 100%;
+  }
+  .post-slider .next{
+    right: 10px;
+ }
+ 
+ .post-slider .prev{
+     left: 10px;
+  }
+
+.about-content{
+    width: 100%;
+}
+
+.about-item{
+    width: 100%;
+}
+
+.contact{
+    width: 100%;
+}
+
+
+.contact-form{
+    width: 80%;
+}
+
+}
